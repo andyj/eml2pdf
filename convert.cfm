@@ -1,5 +1,7 @@
 <cfscript>
   cfsetting( enablecfoutputonly="true")
+
+  // Some paths
   thisPath      = expandPath(".")
   emlFilesPath  = thisPath & "/eml/"
   pdfOutputPath = thisPath & "/outputpdf/"
@@ -10,11 +12,10 @@
   directoryCreate(pdfOutputPath, true, true)
   directoryCreate(processedPath, true, true)
 
+  // Get a list of files
   dl = directoryList(emlFilesPath, false, 'query', '*.eml')
 
-  // Loop over the first email only (we're going to send one every 5 seconds)
-  splitString = "You have made a payment of &##xA3"
-
+  // Flag to see how many files processed
   totalProcessed = 0
 
   dl.filter( function(row, currentRow, qry){
