@@ -4,7 +4,7 @@ Convert .eml files to basic PDF
 It's not fancy, its not Javascript, but it generates a PDF from an .eml file in 40 lines of code.
 
 
-##Installation
+## Installation
 
 1. Install CommandBox: `brew install commandbox` [Other OS installations](https://commandbox.ortusbooks.com/setup/installation)
 2. Clone this repos `https://github.com/andyj/eml2pdf.git`
