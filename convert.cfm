@@ -1,6 +1,4 @@
 <cfscript>
-  cfsetting( enablecfoutputonly="true")
-
   // Some paths
   thisPath      = expandPath(".")
   emlFilesPath  = thisPath & "/eml/"
